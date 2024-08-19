@@ -15,7 +15,7 @@ dotenv.config();
 
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
-
+const dbname = "schoolcool";
 mongoose
     .connect(mongodb+srv://${process.env.atlasUser}:${process.env.atlasPassword}@cluster0.1eexyf1.mongodb.net/${dbname}?retryWrites=true&w=majority&appName=Cluster0, {
         useNewUrlParser: true,
